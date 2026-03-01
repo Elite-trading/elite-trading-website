@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanghai Elite Trading Co., Ltd. | 上海益俪特贸易有限公司</title>
+    <meta name="description" content="Shanghai Elite Trading Co., Ltd. - Professional export trading company specializing in coffee equipment, small home appliances, smart vending solutions, and consumer electronics. 专业出口贸易公司，主营咖啡设备、小家电、智能售货解决方案。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e94560;
+        }
+        
+        .logo span {
+            color: #fff;
+            font-size: 0.85rem;
+            display: block;
+            font-weight: normal;
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        /* Language Switcher */
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        
+        .lang-btn {
+            background: none;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        
+        .lang-btn.active {
+            background: #e94560;
+            color: #fff;
+        }
+        
+        .lang-btn:hover:not(.active) {
+            color: #fff;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+        
+        nav a:hover {
+            color: #e94560;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero .subtitle-cn {
+            font-size: 1.5rem;
+            color: #e94560;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero .subtitle-cn-small {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+        
+        .hero .tagline {
+            font-size: 1rem;
+            color: #e94560;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        
+        .hero .tagline-cn {
+            font-size: 0.95rem;
+            color: #888;
+            margin-top: 0.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #e94560;
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 2rem;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        /* Charging Products Highlight */
+        .charging-section {
+            background: linear-gradient(135deg, #00b894 0%, #0984e3 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .charging-section .section-title {
+            color: white;
+        }
+
+        .charging-section .section-title-cn {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .charging-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .specs-table {
+            width: 100%;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .specs-table td {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specs-table td:first-child {
+            color: #888;
+            width: 40%;
+        }
+
+        .specs-table td:last-child {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .cert-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 1rem;
+        }
+
+        .cert-badge {
+            background: #e94560;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a2e;
+        }
+        
+        .section-title-cn {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #888;
+            margin-bottom: 3rem;
+            font-weight: normal;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+        }
+        
+        .product-card .title-cn {
+            color: #888;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+        
+        .product-card ul {
+            list-style: none;
+            color: #666;
+        }
+        
+        .product-card li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        
+        .product-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #e94560;
+            font-weight: bold;
+        }
+        
+        .product-card .li-cn {
+            color: #999;
+            font-size: 0.85rem;
+            display: block;
+            margin-top: 2px;
+        }
+        
+        /* Advantages Section */
+        .advantages {
+            padding: 80px 0;
+            background: #fff;
+        }
+        
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .advantage-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .advantage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .advantage-item h4 {
+            color: #1a1a2e;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+        
+        .advantage-item .title-cn {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .advantage-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .advantage-item p.cn {
+            color: #999;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #1a1a2e;
+            color: #fff;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-info h3 {
+            color: #e94560;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info .subtitle {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-item .cn {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .contact-form h3 {
+            color: #e94560;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-form .subtitle {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+            background: #16213e;
+            color: #fff;
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #666;
+        }
+        
+        .contact-form button {
+            background: #e94560;
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background: #d63d56;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f0f1a;
+            color: #666;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        footer .cn {
+            color: #444;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hidden class for language toggle */
+        .hidden {
+            display: none !important;
+        }
+        
+        @media (max-width: 768px) {
+            .header-right {
+                gap: 1rem;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #1a1a2e;
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero .subtitle-cn {
+                font-size: 1.2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .lang-switch {
+                padding: 3px 8px;
+            }
+            
+            .lang-btn {
+                padding: 3px 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    ELITE TRADING
+                    <span>上海益俪特贸易有限公司</span>
+                </div>
+                <div class="header-right">
+                    <div class="lang-switch">
+                        <button class="lang-btn active" onclick="switchLang('en')" id="btn-en">EN</button>
+                        <button class="lang-btn" onclick="switchLang('cn')" id="btn-cn">中文</button>
+                    </div>
+                    <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+                    <nav>
+                        <ul id="navMenu">
+                            <li><a href="#home" data-en="Home" data-cn="首页">Home</a></li>
+                            <li><a href="products.html" data-en="Products" data-cn="产品">Products</a></li>
+                            <li><a href="videos.html" data-en="Videos" data-cn="视频">Videos</a></li>
+                            <li><a href="#advantages" data-en="Why Us" data-cn="优势">Why Us</a></li>
+                            <li><a href="#contact" data-en="Contact" data-cn="联系">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Your Reliable Sourcing Partner in China</h1>
+            <p class="subtitle-cn">您可信赖的中国采购合作伙伴</p>
+            <p class="subtitle">Coffee Equipment · Small Home Appliances · Smart Vending · Consumer Electronics</p>
+            <p class="subtitle-cn-small">咖啡设备 · 小家电 · 智能售货 · 消费电子</p>
+            <p class="tagline">PROFESSIONAL SOURCING · RELIABLE EXPORT · GLOBAL REACH</p>
+            <p class="tagline-cn">专业采购 · 可靠出口 · 全球覆盖</p>
+            <a href="#contact" class="cta-button" data-en="Get a Quote" data-cn="获取报价">Get a Quote</a>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Products" data-cn="产品中心">Our Products</h2>
+            <p class="section-title-cn">专业出口贸易，覆盖多品类产品线</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon">☕</div>
+                    <h3>Coffee Equipment</h3>
+                    <p class="title-cn">咖啡设备</p>
+                    <ul>
+                        <li>
+                            Espresso coffee machines
+                            <span class="li-cn">意式咖啡机</span>
+                        </li>
+                        <li>
+                            Automatic coffee vending (SK366, SK588)
+                            <span class="li-cn">自动咖啡售货机</span>
+                        </li>
+                        <li>
+                            Cold & hot beverage dispensers
+                            <span class="li-cn">冷热饮料机</span>
+                        </li>
+                        <li>
+                            Coffee grinders & accessories
+                            <span class="li-cn">磨豆机及配件</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🥤</div>
+                    <h3>Smart Vending Solutions</h3>
+                    <p class="title-cn">智能售货解决方案</p>
+                    <ul>
+                        <li>
+                            Unmanned coffee cabinets
+                            <span class="li-cn">无人咖啡柜</span>
+                        </li>
+                        <li>
+                            Ice & hot dual-purpose vending
+                            <span class="li-cn">冰热双用售货机</span>
+                        </li>
+                        <li>
+                            Smart parking systems (SKY IEE)
+                            <span class="li-cn">智能停车系统</span>
+                        </li>
+                        <li>
+                            Custom vending solutions
+                            <span class="li-cn">定制售货方案</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🍵</div>
+                    <h3>Creative Drinkware</h3>
+                    <p class="title-cn">创意杯具</p>
+                    <ul>
+                        <li>
+                            Jellyfish cups (color-changing)
+                            <span class="li-cn">水母杯（变色杯）</span>
+                        </li>
+                        <li>
+                            Protein shaker cups (auto-mixing)
+                            <span class="li-cn">蛋白搅拌杯（自动搅拌）</span>
+                        </li>
+                        <li>
+                            Temperature-sensitive mugs
+                            <span class="li-cn">感温变色杯</span>
+                        </li>
+                        <li>
+                            Smart display bottles
+                            <span class="li-cn">智能显温杯</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🏠</div>
+                    <h3>Small Home Appliances</h3>
+                    <p class="title-cn">小家电</p>
+                    <ul>
+                        <li>
+                            Hair dryers
+                            <span class="li-cn">吹风机</span>
+                        </li>
+                        <li>
+                            Rice cookers
+                            <span class="li-cn">电饭锅</span>
+                        </li>
+                        <li>
+                            Electric kettles
+                            <span class="li-cn">电热水壶</span>
+                        </li>
+                        <li>
+                            Portable blenders
+                            <span class="li-cn">便携榨汁机</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🔋</div>
+                    <h3>Consumer Electronics</h3>
+                    <p class="title-cn">消费电子</p>
+                    <ul>
+                        <li>
+                            Power banks (various capacities)
+                            <span class="li-cn">充电宝（多容量）</span>
+                        </li>
+                        <li>
+                            Portable chargers
+                            <span class="li-cn">便携充电器</span>
+                        </li>
+                        <li>
+                            USB charging accessories
+                            <span class="li-cn">USB充电配件</span>
+                        </li>
+                        <li>
+                            Custom branding available
+                            <span class="li-cn">支持定制品牌</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🚗</div>
+                    <h3>Smart Parking Systems</h3>
+                    <p class="title-cn">智能停车系统</p>
+                    <ul>
+                        <li>
+                            Automated parking solutions
+                            <span class="li-cn">自动化停车方案</span>
+                        </li>
+                        <li>
+                            License plate recognition
+                            <span class="li-cn">车牌识别系统</span>
+                        </li>
+                        <li>
+                            Payment integration
+                            <span class="li-cn">支付系统集成</span>
+                        </li>
+                        <li>
+                            Complete project support
+                            <span class="li-cn">完整项目支持</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <h2 class="section-title" data-en="Why Choose Us" data-cn="为什么选择我们">Why Choose Us</h2>
+            <p class="section-title-cn">多年出口经验，服务全球客户</p>
+            
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-icon">🏭</div>
+                    <h4>OEM Experience</h4>
+                    <p class="title-cn">OEM代工经验</p>
+                    <p>Long-term partnerships with Italian and German clients</p>
+                    <p class="cn">与意大利、德国客户长期合作</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">✓</div>
+                    <h4>Factory Direct</h4>
+                    <p class="title-cn">工厂直供</p>
+                    <p>Direct sourcing from certified manufacturers</p>
+                    <p class="cn">直接对接认证工厂，价格优势</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">🔍</div>
+                    <h4>Quality Control</h4>
+                    <p class="title-cn">品质管控</p>
+                    <p>Strict QC process and product certifications</p>
+                    <p class="cn">严格质检流程，产品认证齐全</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">🎨</div>
+                    <h4>Custom Orders</h4>
+                    <p class="title-cn">定制服务</p>
+                    <p>Flexible MOQ, custom branding available</p>
+                    <p class="cn">起订量灵活，支持品牌定制</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">🌍</div>
+                    <h4>Export Ready</h4>
+                    <p class="title-cn">出口资质</p>
+                    <p>Complete documentation, CE certification support</p>
+                    <p class="cn">出口文件齐全，支持CE认证</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">🤝</div>
+                    <h4>Reliable Service</h4>
+                    <p class="title-cn">可靠服务</p>
+                    <p>Dedicated support from inquiry to delivery</p>
+                    <p class="cn">从询盘到交付，全程专人跟进</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: #fff;" data-en="Contact Us" data-cn="联系我们">Contact Us</h2>
+            <p class="section-title-cn" style="color: #666; margin-bottom: 3rem;">期待与您的合作</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p class="subtitle">联系方式</p>
+                    
+                    <div class="contact-item">
+                        <strong>Company / 公司</strong>
+                        Shanghai Elite Trading Co., Ltd.<br>
+                        <span class="cn">上海益俪特贸易有限公司</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Email / 邮箱</strong>
+                        112848966@qq.com
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Location / 地址</strong>
+                        Shanghai, China<br>
+                        <span class="cn">中国 · 上海</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>WhatsApp</strong>
+                        Coming soon / 即将开通
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Inquiry</h3>
+                    <p class="subtitle">发送询盘</p>
+                    
+                    <form action="mailto:112848966@qq.com" method="post" enctype="text/plain">
+                        <input type="text" name="name" placeholder="Your Name / 您的姓名" required>
+                        <input type="email" name="email" placeholder="Your Email / 您的邮箱" required>
+                        <input type="text" name="company" placeholder="Company Name / 公司名称">
+                        <input type="text" name="country" placeholder="Country / 国家">
+                        <textarea name="message" rows="4" placeholder="Tell us what products you're interested in... / 请告诉我们您感兴趣的产品..." required></textarea>
+                        <button type="submit" data-en="Send Inquiry" data-cn="发送询盘">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Shanghai Elite Trading Co., Ltd. All rights reserved.</p>
+            <p class="cn">上海益俪特贸易有限公司 版权所有</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+        
+        // Language switching
+        let currentLang = 'en';
+        
+        function switchLang(lang) {
+            currentLang = lang;
+            
+            // Update buttons
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
+            
+            // Update navigation
+            document.querySelectorAll('nav a').forEach(el => {
+                el.textContent = el.getAttribute('data-' + lang);
+            });
+            
+            // Update section titles
+            document.querySelectorAll('.section-title').forEach(el => {
+                if (el.getAttribute('data-' + lang)) {
+                    el.textContent = el.getAttribute('data-' + lang);
+                }
+            });
+            
+            // Update CTA button
+            document.querySelectorAll('.cta-button').forEach(el => {
+                if (el.getAttribute('data-' + lang)) {
+                    el.textContent = el.getAttribute('data-' + lang);
+                }
+            });
+            
+            // Update form button
+            document.querySelectorAll('.contact-form button').forEach(el => {
+                if (el.getAttribute('data-' + lang)) {
+                    el.textContent = el.getAttribute('data-' + lang);
+                }
+            });
+            
+            // Show/hide Chinese elements
+            document.querySelectorAll('.title-cn, .li-cn, .cn, .subtitle-cn, .subtitle-cn-small, .tagline-cn').forEach(el => {
+                el.style.display = lang === 'cn' ? 'block' : 'none';
+            });
+            
+            // Update section subtitle
+            const productSubtitle = document.querySelector('#products .section-title-cn');
+            if (productSubtitle) {
+                productSubtitle.textContent = lang === 'cn' ? '专业出口贸易，覆盖多品类产品线' : '';
+            }
+            
+            const advSubtitle = document.querySelector('#advantages .section-title-cn');
+            if (advSubtitle) {
+                advSubtitle.textContent = lang === 'cn' ? '多年出口经验，服务全球客户' : '';
+            }
+            
+            const contactSubtitle = document.querySelector('#contact .section-title-cn');
+            if (contactSubtitle) {
+                contactSubtitle.textContent = lang === 'cn' ? '期待与您的合作' : '';
+            }
+        }
+        
+        // Initialize - hide Chinese elements by default
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.title-cn, .li-cn, .cn, .subtitle-cn, .subtitle-cn-small, .tagline-cn').forEach(el => {
+                el.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
