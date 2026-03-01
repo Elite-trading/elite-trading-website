@@ -17,57 +17,47 @@
         .page-title { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; padding: 120px 0 60px; text-align: center; }
         .page-title h1 { font-size: 2.5rem; margin-bottom: 10px; }
         
-        /* Category Navigation */
-        .category-nav { background: white; padding: 20px 0; position: sticky; top: 60px; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .category-nav ul { display: flex; justify-content: center; gap: 15px; list-style: none; flex-wrap: wrap; }
-        .category-nav a { color: #666; text-decoration: none; padding: 8px 16px; border-radius: 20px; transition: all 0.3s; font-size: 0.9rem; }
-        .category-nav a:hover, .category-nav a.active { background: #e94560; color: white; }
+        .products-section { padding: 40px 0; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 2rem; color: #1a1a2e; margin-bottom: 10px; }
+        .section-title p { color: #666; }
         
-        /* Section Headers */
-        .section-banner { padding: 40px; text-align: center; margin: 40px 0 20px; border-radius: 12px; }
-        .section-banner.usb { background: linear-gradient(135deg, #00b894 0%, #0984e3 100%); color: white; }
-        .section-banner.smart { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
-        .section-banner.coffee { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; }
-        .section-banner.vending { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
-        .section-banner.vacuum { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; }
-        .section-banner.severin { background: linear-gradient(135deg, #434343 0%, #000000 100%); color: white; }
-        .section-banner h2 { font-size: 1.8rem; margin-bottom: 10px; }
-        
-        .products-section { padding: 20px 0 40px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 30px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
         .product-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
         .product-card:hover { transform: translateY(-5px); }
-        .product-card.featured { border: 3px solid #00b894; }
-        .product-image { width: 100%; height: 280px; object-fit: contain; background: #f8f9fa; padding: 10px; }
+        .product-image { width: 100%; height: 300px; object-fit: cover; background: #f8f9fa; }
         .product-content { padding: 25px; }
         .product-badge { display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; margin-bottom: 10px; margin-right: 5px; }
         .product-badge.usb { background: linear-gradient(135deg, #00b894 0%, #00cec9 100%); color: white; }
-        .product-badge.smart { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
-        .product-badge.new { background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%); color: #333; }
         .product-badge.award { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); color: white; }
         .product-badge.oem { background: linear-gradient(135deg, #4834d4 0%, #686de0 100%); color: white; }
         .product-content h3 { font-size: 1.2rem; color: #1a1a2e; margin-bottom: 5px; }
         .product-subtitle { color: #e94560; font-size: 0.85rem; margin-bottom: 12px; }
-        .product-desc { color: #666; font-size: 0.9rem; line-height: 1.5; margin-bottom: 12px; }
-        .features-list { list-style: none; margin: 12px 0; }
-        .features-list li { padding: 4px 0; padding-left: 18px; position: relative; font-size: 0.85rem; color: #555; }
-        .features-list li::before { content: '✓'; position: absolute; left: 0; color: #00b894; font-weight: bold; }
-        .specs-table { width: 100%; margin-top: 12px; font-size: 0.8rem; border-collapse: collapse; }
-        .specs-table td { padding: 8px; border-bottom: 1px solid #eee; }
+        .product-desc { color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px; }
+        .features-list { list-style: none; margin-bottom: 15px; }
+        .features-list li { padding: 5px 0; color: #555; font-size: 0.9rem; }
+        .specs-table { width: 100%; font-size: 0.85rem; margin-top: 15px; }
+        .specs-table td { padding: 5px 0; }
         .specs-table td:first-child { color: #888; width: 40%; }
-        .specs-table .highlight { color: #00b894; font-weight: bold; }
-        .cert-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
-        .cert-badge { background: #e94560; color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; }
-        footer { background: #1a1a2e; color: #fff; text-align: center; padding: 40px 0; margin-top: 60px; }
-        @media (max-width: 768px) { .product-grid { grid-template-columns: 1fr; } .category-nav ul { gap: 10px; } }
+        .specs-table td:last-child { color: #333; font-weight: 500; }
+        .cert-badges { margin-top: 15px; }
+        .cert-badge { display: inline-block; background: #f0f0f0; padding: 4px 12px; border-radius: 15px; font-size: 0.75rem; margin-right: 5px; margin-bottom: 5px; }
+        
+        footer { background: #1a1a2e; color: #fff; text-align: center; padding: 40px 20px; margin-top: 60px; }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">ELITE TRADING<span>上海益俪特贸易有限公司</span></div>
-                <nav><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav>
+                <div class="logo">ELITE TRADING <span>上海益俪特贸易有限公司</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -75,489 +65,195 @@
     <div class="page-title">
         <div class="container">
             <h1>Our Products</h1>
-            <p style="color:#888;">Premium Coffee Equipment, Smart Drinkware & USB Rechargeable Solutions</p>
+            <p>Premium Coffee Equipment, Smart Drinkware & USB Rechargeable Solutions</p>
         </div>
     </div>
 
-    <nav class="category-nav">
-        <div class="container">
-            <ul>
-                <li><a href="#usb" class="active">🔋 USB</a></li>
-                <li><a href="#smart">🌡️ Smart Cups</a></li>
-                <li><a href="#coffee">☕ Coffee OEM</a></li>
-                <li><a href="#vending">🤖 Vending</a></li>
-                <li><a href="#vacuum">🍶 Vacuum Bottles</a></li>
-                <li><a href="#severin">🇩🇪 SEVERIN</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <div class="container">
-        
-        <!-- USB CHARGING PRODUCTS -->
-        <div id="usb" class="section-banner usb">
-            <h2>🔋 USB Rechargeable Products</h2>
-            <p>Smart charging solutions with fast-charging technology</p>
-        </div>
-
+        <!-- USB Rechargeable Products -->
         <div class="products-section">
+            <div class="section-title">
+                <h2>🔋 USB Rechargeable Products</h2>
+                <p>Smart Charging Solutions | Battery-Powered Innovation</p>
+            </div>
             <div class="product-grid">
                 
-                <!-- POWER BANK -->
-                <div class="product-card featured">
-                    <img src="product_images/power_banks/power_bank_black.jpg" class="product-image" alt="Capsule Power Bank">
+                <!-- Auto Protein Shaker -->
+                <div class="product-card">
+                    <img src="product_images/protein_shakers_11.jpeg" class="product-image" alt="Auto Protein Shaker">
                     <div class="product-content">
-                        <span class="product-badge usb">CAPSULE POWER BANK</span>
-                        <h3>Mini Capsule Power Bank</h3>
-                        <p class="product-subtitle">5000mAh Portable Emergency Charger</p>
-                        <p class="product-desc">Ultra-compact capsule design with integrated Lightning/Type-C cable. Perfect for on-the-go emergency charging.</p>
-                        <ul class="features-list">
-                            <li>5000mAh capacity</li>
-                            <li>Built-in charging cable</li>
-                            <li>LED power indicator</li>
-                            <li>3 colors: Black/Pink/Green</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Capacity:</td><td class="highlight">5000mAh</td></tr>
-                            <tr><td>Output:</td><td>5V/2A</td></tr>
-                            <tr><td>MOQ:</td><td>100 units</td></tr>
-                        </table>
-                        <div class="cert-badges"><span class="cert-badge">CE</span><span class="cert-badge">FCC</span><span class="cert-badge">ROHS</span></div>
-                    </div>
-                </div>
-
-                <!-- USB PROTEIN SHAKER -->
-                <div class="product-card featured">
-                    <img src="product_images/protein_shakers/19ca2094-2572-8f97-8000-00009d0ceed5_20240730_蛋白搅拌杯资料_page1_img1.jpeg" class="product-image" alt="Auto Protein Shaker">
-                    <div class="product-content">
-                        <span class="product-badge usb">20MIN FAST CHARGE</span>
-                        <span class="product-badge new">BEST SELLER</span>
-                        <h3>Auto Protein Shaker 860075</h3>
+                        <span class="product-badge usb">⚡ USB CHARGING</span>
+                        <h3>Auto Protein Shaker - 860075 Series</h3>
                         <p class="product-subtitle">USB Rechargeable Automatic Mixer</p>
-                        <p class="product-desc">600mAh Li-ion battery delivers smooth, lump-free protein shakes in 45 seconds with one-touch operation.</p>
+                        <p class="product-desc">Revolutionary USB rechargeable protein mixer with powerful motor. Perfect for gym enthusiasts and outdoor activities.</p>
                         <ul class="features-list">
-                            <li>600mAh battery, 20min fast charging</li>
-                            <li>45-second auto-mixing</li>
-                            <li>Food-grade AS/Tritan, BPA-free</li>
-                            <li>5.6W powerful motor</li>
+                            <li>✓ 600mAh Li-ion battery</li>
+                            <li>✓ 20-minute fast charging</li>
+                            <li>✓ 45-second auto-mixing</li>
+                            <li>✓ Food-grade AS/Tritan, BPA-free</li>
+                            <li>✓ 5.6W powerful motor</li>
                         </ul>
                         <table class="specs-table">
-                            <tr><td>Battery:</td><td class="highlight">3.7V 600mAh</td></tr>
-                            <tr><td>Charging:</td><td class="highlight">~20 Minutes</td></tr>
+                            <tr><td>Battery:</td><td>3.7V, 600mAh Li-ion</td></tr>
+                            <tr><td>Charging:</td><td>~20 Minutes</td></tr>
+                            <tr><td>Working Current:</td><td>1.5A</td></tr>
+                            <tr><td>Power:</td><td>5.6W</td></tr>
+                            <tr><td>Size:</td><td>90×65×245mm</td></tr>
+                            <tr><td>Weight:</td><td>310g</td></tr>
+                            <tr><td>Colors:</td><td>Blue, Black, Pink</td></tr>
                             <tr><td>MOQ:</td><td>1000 units</td></tr>
                         </table>
-                        <div class="cert-badges"><span class="cert-badge">CE</span><span class="cert-badge">FCC</span><span class="cert-badge">FDA</span><span class="cert-badge">ROHS</span></div>
+                        <div class="cert-badges">
+                            <span class="cert-badge">CE</span>
+                            <span class="cert-badge">FCC</span>
+                            <span class="cert-badge">FDA</span>
+                            <span class="cert-badge">ROHS</span>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <!-- SMART CUPS -->
-        <div id="smart" class="section-banner smart">
-            <h2>🌡️ Smart Drinkware</h2>
-            <p>Color changing, temperature control & auto-mixing solutions</p>
-        </div>
-
+        <!-- Vacuum Bottles -->
         <div class="products-section">
-            <div class="product-grid">
-
-                <!-- COLOR CHANGING CUP -->
-                <div class="product-card">
-                    <div style="height:280px;background:linear-gradient(135deg,#ff6b6b,#feca57);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">🌈</div>
-                    <div class="product-content">
-                        <span class="product-badge smart">COLOR CHANGING</span>
-                        <span class="product-badge new">NEW</span>
-                        <h3>Magic Color Changing Cup</h3>
-                        <p class="product-subtitle">Heat & Cold Reactive Drinkware</p>
-                        <p class="product-desc">Innovative temperature-reactive cups that change color with hot or cold beverages. Perfect for gifts and promotions.</p>
-                        <ul class="features-list">
-                            <li>Heat reactive (>40°C)</li>
-                            <li>Cold reactive (<15°C)</li>
-                            <li>Customizable designs</li>
-                            <li>Creative gift option</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Types:</td><td class="highlight">Heat / Cold Reactive</td></tr>
-                            <tr><td>Customization:</td><td>Available</td></tr>
-                            <tr><td>MOQ:</td><td>Contact us</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- AUTO SHAKER MANUAL -->
-                <div class="product-card">
-                    <div style="height:280px;background:linear-gradient(135deg,#74b9ff,#0984e3);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">🔄</div>
-                    <div class="product-content">
-                        <span class="product-badge smart">AUTO MIXING</span>
-                        <h3>Auto Shaker - Manual/Battery</h3>
-                        <p class="product-subtitle">Non-Charging Automatic Mixer</p>
-                        <p class="product-desc">Portable automatic shaker without USB charging. Battery or manual operation for protein shakes and beverages.</p>
-                        <ul class="features-list">
-                            <li>No charging required</li>
-                            <li>Battery or manual drive</li>
-                            <li>Portable design</li>
-                            <li>Easy one-button operation</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Power:</td><td class="highlight">Battery / Manual</td></tr>
-                            <tr><td>Charging:</td><td>Not Required</td></tr>
-                            <tr><td>MOQ:</td><td>Contact us</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- SMART HOT/COLD CUP -->
-                <div class="product-card">
-                    <div style="height:280px;background:linear-gradient(135deg,#00b894,#00cec9);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">❄️🔥</div>
-                    <div class="product-content">
-                        <span class="product-badge smart">TEMP CONTROL</span>
-                        <h3>Smart Hot/Cold Cup - Car Edition</h3>
-                        <p class="product-subtitle">Intelligent Temperature Control</p>
-                        <p class="product-desc">Advanced temperature control cup with 12V car power. Rapid cooling or heating with digital temperature display.</p>
-                        <ul class="features-list">
-                            <li>12V car power supply</li>
-                            <li>Rapid cooling & heating</li>
-                            <li>Digital temp display</li>
-                            <li>Car & office use</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Power:</td><td class="highlight">12V Car / DC</td></tr>
-                            <tr><td>Function:</td><td class="highlight">Heat & Cool</td></tr>
-                            <tr><td>Display:</td><td>Digital LED</td></tr>
-                        </table>
-                    </div>
-                </div>
-
+            <div class="section-title">
+                <h2>🍶 Vacuum Bottles - Award Winning Design</h2>
+                <p>AKS Jellyfish Series - iF & Red Dot Award Winner</p>
             </div>
-        </div>
-
-        <!-- COFFEE EQUIPMENT OEM -->
-        <div id="coffee" class="section-banner coffee">
-            <h2>☕ Coffee Equipment - OEM/ODM</h2>
-            <p>Professional espresso machines - Tianhang Manufacturing for Italian Brands</p>
-        </div>
-
-        <div class="products-section">
             <div class="product-grid">
-
-                <!-- ESPRESSO MACHINE OEM -->
-                <div class="product-card featured">
-                    <div style="height:280px;background:linear-gradient(135deg,#2d3436,#636e72);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">☕</div>
-                    <div class="product-content">
-                        <span class="product-badge oem">OEM/ODM AVAILABLE</span>
-                        <span class="product-badge new">ITALIAN DESIGN</span>
-                        <h3>Semi-Automatic Espresso Machine</h3>
-                        <p class="product-subtitle">15-20 Bar Pressure System - Tianhang OEM</p>
-                        <p class="product-desc">Professional espresso machines manufactured by Tianhang for Italian brands. Custom branding and specifications available.</p>
-                        <ul class="features-list">
-                            <li>15-20 Bar professional pressure pump</li>
-                            <li>Stainless steel construction</li>
-                            <li>Milk frother included</li>
-                            <li>PID temperature control available</li>
-                            <li>Dual boiler system option</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Pressure:</td><td class="highlight">15-20 Bar</td></tr>
-                            <tr><td>Power:</td><td>850W-1350W</td></tr>
-                            <tr><td>Service:</td><td class="highlight">OEM/ODM</td></tr>
-                            <tr><td>MOQ:</td><td>200-500 units</td></tr>
-                        </table>
-                        <div class="cert-badges"><span class="cert-badge">CE</span><span class="cert-badge">ROHS</span><span class="cert-badge">ISO 9001</span></div>
-                    </div>
-                </div>
-
-                <!-- FULLY AUTOMATIC -->
+                
+                <!-- Jellyfish Classic -->
                 <div class="product-card">
-                    <div style="height:280px;background:linear-gradient(135deg,#636e72,#b2bec3);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">⚙️</div>
-                    <div class="product-content">
-                        <span class="product-badge oem">FULLY AUTOMATIC</span>
-                        <h3>Fully Automatic Coffee Machine</h3>
-                        <p class="product-subtitle">Bean-to-Cup Solution</p>
-                        <p class="product-desc">All-in-one automatic coffee machine with integrated grinder. One-touch operation for espresso, cappuccino, and Americano.</p>
-                        <ul class="features-list">
-                            <li>Built-in conical burr grinder</li>
-                            <li>One-touch operation</li>
-                            <li>Programmable settings</li>
-                            <li>Auto cleaning function</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Type:</td><td class="highlight">Bean-to-Cup</td></tr>
-                            <tr><td>Pressure:</td><td>15-19 Bar</td></tr>
-                            <tr><td>MOQ:</td><td>300 units</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- VENDING MACHINES -->
-        <div id="vending" class="section-banner vending">
-            <h2>🤖 Unmanned Coffee Vending Machines</h2>
-            <p>Smart self-service coffee solutions for commercial spaces</p>
-        </div>
-
-        <div class="products-section">
-            <div class="product-grid">
-
-                <!-- SK366 -->
-                <div class="product-card featured">
-                    <img src="product_images/vending_machines/sk366_page1_img1.jpeg" class="product-image" alt="SK366 Vending Machine">
-                    <div class="product-content">
-                        <span class="product-badge" style="background:#667eea;color:white;">SK366</span>
-                        <span class="product-badge new">SMART VENDING</span>
-                        <h3>SK366 Unmanned Coffee Vending Machine</h3>
-                        <p class="product-subtitle">Fully Automatic Self-Service Coffee Station</p>
-                        <p class="product-desc">Advanced unmanned coffee vending solution with touchscreen interface and multiple payment options.</p>
-                        <ul class="features-list">
-                            <li>Touch screen ordering interface</li>
-                            <li>Multiple coffee drink options</li>
-                            <li>Automatic cup dispensing</li>
-                            <li>Mobile payment support</li>
-                            <li>Remote monitoring system</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Type:</td><td class="highlight">Unmanned Vending</td></tr>
-                            <tr><td>Interface:</td><td>Touch Screen</td></tr>
-                            <tr><td>Payment:</td><td>Mobile/Cash/Card</td></tr>
-                        </table>
-                        <div class="cert-badges"><span class="cert-badge">CE</span><span class="cert-badge">ISO</span></div>
-                    </div>
-                </div>
-
-                <!-- SK588 -->
-                <div class="product-card featured">
-                    <img src="product_images/vending_machines/sk588_page1_img1.jpeg" class="product-image" alt="SK588 Vending Machine">
-                    <div class="product-content">
-                        <span class="product-badge" style="background:#764ba2;color:white;">SK588</span>
-                        <span class="product-badge new">HOT & COLD</span>
-                        <h3>SK588 Hot/Cold Coffee Vending Machine</h3>
-                        <p class="product-subtitle">Dual-Temperature Self-Service Solution</p>
-                        <p class="product-desc">Versatile vending machine supporting both hot and cold beverages. Perfect for year-round operation in any climate.</p>
-                        <ul class="features-list">
-                            <li>Hot & cold drink options</li>
-                            <li>Large touchscreen display</li>
-                            <li>Multiple flavor selections</li>
-                            <li>Smart temperature control</li>
-                            <li>Ice dispensing (optional)</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Type:</td><td class="highlight">Hot/Cold Vending</td></tr>
-                            <tr><td>Display:</td><td>Large Touch Screen</td></tr>
-                            <tr><td>Temp Control:</td><td>Smart System</td></tr>
-                        </table>
-                        <div class="cert-badges"><span class="cert-badge">CE</span><span class="cert-badge">ISO</span></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- VACUUM BOTTLES -->
-        <div id="vacuum" class="section-banner vacuum">
-            <h2>🍶 Vacuum Bottles - Award Winning Design</h2>
-            <p>AKS Jellyfish Series - iF & Red Dot Award Winner</p>
-        </div>
-
-        <div class="products-section">
-            <div class="product-grid">
-
-                <!-- JELLYFISH CLASSIC -->
-                <div class="product-card featured">
-                    <img src="product_images/cups/jellyfish_page4_img1.jpeg" class="product-image" alt="Jellyfish Series">
+                    <img src="product_images/cups/19ca2094-36a2-885c-8000-0000224f50f2_20240618_红咖咖水母杯彩页_page5_img1.jpeg" class="product-image" alt="Jellyfish Series">
                     <div class="product-content">
                         <span class="product-badge award">🏆 iF + RED DOT</span>
-                        <span class="product-badge new">AWARD WINNING</span>
                         <h3>Jellyfish Series Vacuum Bottle</h3>
                         <p class="product-subtitle">AKS 609/610 - Classic Design</p>
                         <p class="product-desc">Internationally acclaimed design inspired by jellyfish. Premium 304 stainless steel with superior 24-hour thermal performance.</p>
                         <ul class="features-list">
-                            <li>304 Stainless steel construction</li>
-                            <li>Double-wall vacuum insulation</li>
-                            <li>24h insulation: maintains 40°C</li>
-                            <li>Multiple colors available</li>
+                            <li>✓ 304 Stainless steel construction</li>
+                            <li>✓ Double-wall vacuum insulation</li>
+                            <li>✓ 24h insulation: maintains 40°C</li>
+                            <li>✓ Multiple colors available</li>
                         </ul>
                         <table class="specs-table">
-                            <tr><td>Models:</td><td class="highlight">AKS 609 (360ML) / 610 (500ML)</td></tr>
-                            <tr><td>Awards:</td><td class="highlight">iF, Red Dot, IDEA, Red Star</td></tr>
-                            <tr><td>Colors:</td><td>Green/Pink/Yellow/Coffee</td></tr>
+                            <tr><td>Models:</td><td>AKS 609 (360ML) / 610 (500ML)</td></tr>
+                            <tr><td>Size (609):</td><td>66×66×195 mm</td></tr>
+                            <tr><td>Size (610):</td><td>66×66×235 mm</td></tr>
+                            <tr><td>Awards:</td><td>iF, Red Dot, IDEA, Red Star</td></tr>
+                            <tr><td>Colors:</td><td>Green, Pink, Yellow, Coffee</td></tr>
                         </table>
-                        <div class="cert-badges"><span class="cert-badge">FDA</span><span class="cert-badge">BPA Free</span><span class="cert-badge">SGS</span></div>
-                    </div>
-                </div>
-
-                <!-- JELLYFISH CARRY STRAP -->
-                <div class="product-card">
-                    <img src="product_images/cups/jellyfish_page6_img2.jpeg" class="product-image" alt="Jellyfish Carry Strap">
-                    <div class="product-content">
-                        <span class="product-badge award">🏆 AWARD WINNING</span>
-                        <h3>Jellyfish Carry-Strap Bottle</h3>
-                        <p class="product-subtitle">AKS 611/612 - Portable Design</p>
-                        <p class="product-desc">Portable version with silicone carry strap. Same award-winning design with added convenience for on-the-go use.</p>
-                        <ul class="features-list">
-                            <li>Silicone carry strap</li>
-                            <li>Anti-hot mouth design</li>
-                            <li>Same thermal performance</li>
-                            <li>Portable and lightweight</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Models:</td><td class="highlight">AKS 611 (360ML) / 612 (500ML)</td></tr>
-                            <tr><td>Material:</td><td>304 Stainless Steel</td></tr>
-                            <tr><td>Feature:</td><td>Carry Strap</td></tr>
-                        </table>
+                        <div class="cert-badges">
+                            <span class="cert-badge">FDA</span>
+                            <span class="cert-badge">BPA Free</span>
+                            <span class="cert-badge">SGS</span>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <!-- SEVERIN GERMAN BRAND -->
-        <div id="severin" class="section-banner severin">
-            <h2>🇩🇪 SEVERIN - German Quality Since 1892</h2>
-            <p>Premium German brand coffee machines, grills & kitchen appliances</p>
+        <!-- Coffee Equipment -->
+        <div class="products-section">
+            <div class="section-title">
+                <h2>☕ Coffee Equipment - OEM/ODM</h2>
+                <p>Professional espresso machines - Tianhang Manufacturing for Italian Brands</p>
+            </div>
+            <div class="product-grid">
+                
+                <!-- Espresso Machine -->
+                <div class="product-card">
+                    <img src="product_images/coffee_machines_01.jpeg" class="product-image" alt="Espresso Machine">
+                    <div class="product-content">
+                        <span class="product-badge oem">☕ OEM/ODM AVAILABLE</span>
+                        <h3>Semi-Automatic Espresso Machine</h3>
+                        <p class="product-subtitle">15-20 Bar Pressure System - Tianhang OEM</p>
+                        <p class="product-desc">Professional espresso machines manufactured by Tianhang for Italian brands. Custom branding and specifications available.</p>
+                        <ul class="features-list">
+                            <li>✓ 15-20 Bar professional pressure pump</li>
+                            <li>✓ Stainless steel construction</li>
+                            <li>✓ Milk frother included</li>
+                            <li>✓ PID temperature control available</li>
+                            <li>✓ Dual boiler system option</li>
+                        </ul>
+                        <table class="specs-table">
+                            <tr><td>Pressure:</td><td>15-20 Bar</td></tr>
+                            <tr><td>Power:</td><td>850W-1350W</td></tr>
+                            <tr><td>Service:</td><td>OEM/ODM Available</td></tr>
+                            <tr><td>MOQ:</td><td>200-500 units</td></tr>
+                        </table>
+                        <div class="cert-badges">
+                            <span class="cert-badge">CE</span>
+                            <span class="cert-badge">ROHS</span>
+                            <span class="cert-badge">ISO 9001</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
+        <!-- Vending Machines -->
         <div class="products-section">
+            <div class="section-title">
+                <h2>🤖 Unmanned Coffee Vending Machines</h2>
+                <p>Smart self-service coffee solutions for commercial spaces</p>
+            </div>
             <div class="product-grid">
-
-                <!-- SEVERIN GRIND & BREW -->
-                <div class="product-card featured">
-                    <img src="product_images/severin/severin_page8_img97.jpeg" class="product-image" alt="SEVERIN Coffee Maker">
-                    <div class="product-content">
-                        <span class="product-badge award">🏆 RED DOT 2022</span>
-                        <span class="product-badge new">GERMAN DESIGN</span>
-                        <h3>SEVERIN Grind & Brew Coffee Maker</h3>
-                        <p class="product-subtitle">Model: KA4850 (FILKA) - Bean to Cup</p>
-                        <p class="product-desc">Award-winning bean-to-cup coffee maker with integrated grinder. Fresh American coffee at the touch of a button.</p>
-                        <ul class="features-list">
-                            <li>Built-in conical burr grinder</li>
-                            <li>Bean-to-cup fresh brewing</li>
-                            <li> programmable timer</li>
-                            <li>2022 Red Dot Design Award</li>
-                            <li>2022 German Design Award</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Model:</td><td class="highlight">KA4850 (FILKA)</td></tr>
-                            <tr><td>Type:</td><td>Grind & Brew</td></tr>
-                            <tr><td>Awards:</td><td class="highlight">Red Dot + German Design</td></tr>
-                        </table>
-                        <div class="cert-badges"><span class="cert-badge">CE</span><span class="cert-badge">GS</span><span class="cert-badge">German Quality</span></div>
-                    </div>
-                </div>
-
-                <!-- SEVERIN ELECTRIC GRILL -->
-                <div class="product-card featured">
-                    <img src="product_images/severin/severin_page48_img97.jpeg" class="product-image" alt="SEVERIN Electric Grill">
-                    <div class="product-content">
-                        <span class="product-badge" style="background:#e74c3c;color:white;">#1 IN GERMANY</span>
-                        <span class="product-badge new">26% MARKET SHARE</span>
-                        <h3>SEVERIN Electric Grill</h3>
-                        <p class="product-subtitle">Indoor/Outdoor BBQ Solution</p>
-                        <p class="product-desc">Germany's #1 electric grill brand. Smokeless design perfect for indoor use with authentic BBQ flavor.</p>
-                        <ul class="features-list">
-                            <li>Germany's #1 grill brand (26% share)</li>
-                            <li>Smokeless indoor design</li>
-                            <li>Removable grill plates</li>
-                            <li>Adjustable temperature</li>
-                            <li>Easy to clean</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Market:</td><td class="highlight">#1 in Germany</td></tr>
-                            <tr><td>Share:</td><td class="highlight">26% Market Share</td></tr>
-                            <tr><td>Use:</td><td>Indoor/Outdoor</td></tr>
-                        </table>
-                        <div class="cert-badges"><span class="cert-badge">CE</span><span class="cert-badge">GS</span><span class="cert-badge">German Quality</span></div>
-                    </div>
-                </div>
-
-                <!-- SEVERIN FULLY AUTO -->
+                
+                <!-- SK366 -->
                 <div class="product-card">
-                    <div style="height:280px;background:linear-gradient(135deg,#2c3e50,#34495e);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">☕</div>
+                    <img src="product_images/vending_machines/19ca2094-6932-8da2-8000-00007e8581c7_SK366_无人售货咖啡柜_page24_img4.png" class="product-image" alt="SK366 Vending Machine">
                     <div class="product-content">
-                        <span class="product-badge" style="background:#e74c3c;color:white;">FULLY AUTOMATIC</span>
-                        <h3>SEVERIN Fully Automatic Coffee Machine</h3>
-                        <p class="product-subtitle">Model: KV8090 - Touch Control</p>
-                        <p class="product-desc">Premium fully automatic coffee machine with integrated grinder and auto-cleaning function.</p>
+                        <span class="product-badge usb">📱 SMART VENDING</span>
+                        <h3>SK366 Unmanned Coffee Vending Machine</h3>
+                        <p class="product-subtitle">Fully Automatic Self-Service Coffee Station</p>
+                        <p class="product-desc">Advanced unmanned coffee vending solution with touchscreen interface and multiple payment options.</p>
                         <ul class="features-list">
-                            <li>19 Bar stable pressure extraction</li>
-                            <li>LED touch control panel</li>
-                            <li>Grinding integrated</li>
-                            <li>Auto cleaning function</li>
-                            <li>1.2L water tank</li>
+                            <li>✓ Touch screen ordering interface</li>
+                            <li>✓ Multiple coffee drink options</li>
+                            <li>✓ Automatic cup dispensing</li>
+                            <li>✓ Mobile payment support</li>
+                            <li>✓ Remote monitoring system</li>
                         </ul>
                         <table class="specs-table">
-                            <tr><td>Model:</td><td class="highlight">KV8090</td></tr>
-                            <tr><td>Power:</td><td>1235W</td></tr>
-                            <tr><td>Pressure:</td><td>19 Bar</td></tr>
+                            <tr><td>Type:</td><td>Unmanned Vending</td></tr>
+                            <tr><td>Interface:</td><td>Touch Screen</td></tr>
+                            <tr><td>Payment:</td><td>Mobile/Cash/Card</td></tr>
                         </table>
+                        <div class="cert-badges">
+                            <span class="cert-badge">CE</span>
+                            <span class="cert-badge">ISO</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- SEVERIN SEMI-AUTO -->
+                <!-- SK588 -->
                 <div class="product-card">
-                    <div style="height:280px;background:linear-gradient(135deg,#34495e,#2c3e50);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">⚙️</div>
+                    <img src="product_images/vending_machines/19ca2094-9622-8210-8000-00005dbc3084_SK588冰热两用无人售货咖啡柜_page11_img2.png" class="product-image" alt="SK588 Vending Machine">
                     <div class="product-content">
-                        <span class="product-badge" style="background:#e67e22;color:white;">SEMI-AUTOMATIC</span>
-                        <h3>SEVERIN Semi-Auto Espresso Machine</h3>
-                        <p class="product-subtitle">Model: KA5995 - Steam Wand</p>
-                        <p class="product-desc">Professional semi-automatic espresso machine with steam wand for milk frothing. Perfect for latte art.</p>
+                        <span class="product-badge award">❄️🔥 HOT & COLD</span>
+                        <h3>SK588 Hot/Cold Coffee Vending Machine</h3>
+                        <p class="product-subtitle">Dual-Temperature Self-Service Solution</p>
+                        <p class="product-desc">Versatile vending machine supporting both hot and cold beverages. Perfect for year-round operation in any climate.</p>
                         <ul class="features-list">
-                            <li>0-20bar pressure extraction</li>
-                            <li>Thermo-block heating system</li>
-                            <li>Steam wand for milk frothing</li>
-                            <li>1350W power</li>
+                            <li>✓ Hot & cold drink options</li>
+                            <li>✓ Large touchscreen display</li>
+                            <li>✓ Multiple flavor selections</li>
+                            <li>✓ Smart temperature control</li>
+                            <li>✓ Ice dispensing (optional)</li>
                         </ul>
                         <table class="specs-table">
-                            <tr><td>Model:</td><td class="highlight">KA5995</td></tr>
-                            <tr><td>Power:</td><td>1350W</td></tr>
-                            <tr><td>Cert:</td><td>CE, RoHS, LFGB</td></tr>
+                            <tr><td>Type:</td><td>Hot/Cold Vending</td></tr>
+                            <tr><td>Display:</td><td>Large Touch Screen</td></tr>
+                            <tr><td>Temp Control:</td><td>Smart System</td></tr>
                         </table>
-                    </div>
-                </div>
-
-                <!-- SEVERIN MILK FROTHER -->
-                <div class="product-card">
-                    <div style="height:280px;background:linear-gradient(135deg,#f39c12,#e74c3c);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">🥛</div>
-                    <div class="product-content">
-                        <span class="product-badge award">🏆 RED DOT 2020</span>
-                        <h3>SEVERIN Milk Frother</h3>
-                        <p class="product-subtitle">Model: SM3587 - 11 Smart Modes</p>
-                        <p class="product-desc">Award-winning milk frother with 11 intelligent modes for perfect milk foam every time.</p>
-                        <ul class="features-list">
-                            <li>11 smart modes</li>
-                            <li>Electromagnetic heating</li>
-                            <li>2020 Red Dot Award</li>
-                            <li>2020 German PLUS X Award</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Model:</td><td class="highlight">SM3587</td></tr>
-                            <tr><td>Modes:</td><td>11 Smart Modes</td></tr>
-                            <tr><td>Awards:</td><td>Red Dot + PLUS X</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- SEVERIN ICE CREAM MAKER -->
-                <div class="product-card">
-                    <div style="height:280px;background:linear-gradient(135deg,#3498db,#9b59b6);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">🍦</div>
-                    <div class="product-content">
-                        <span class="product-badge" style="background:#9b59b6;color:white;">ICE CREAM</span>
-                        <h3>SEVERIN Ice Cream Maker</h3>
-                        <p class="product-subtitle">Model: EZ7403 - Compressor Cooling</p>
-                        <p class="product-desc">Make fresh ice cream in 30 minutes with compressor cooling technology. No pre-freezing required.</p>
-                        <ul class="features-list">
-                            <li>Compressor cooling (no pre-freeze)</li>
-                            <li>30-minute quick freeze</li>
-                            <li>800mL capacity</li>
-                            <li>Compact A4 footprint</li>
-                            <li>100W power</li>
-                        </ul>
-                        <table class="specs-table">
-                            <tr><td>Model:</td><td class="highlight">EZ7403</td></tr>
-                            <tr><td>Capacity:</td><td>800mL</td></tr>
-                            <tr><td>Power:</td><td>100W</td></tr>
-                        </table>
+                        <div class="cert-badges">
+                            <span class="cert-badge">CE</span>
+                            <span class="cert-badge">ISO</span>
+                        </div>
                     </div>
                 </div>
 
@@ -568,23 +264,12 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Shanghai Elite Trading Co., Ltd. All Rights Reserved.</p>
-            <p style="color:#888; margin-top:10px;">Professional OEM/ODM Manufacturing | Global Export | German Quality Standards</p>
+            <h3>Shanghai Elite Trading Co., Ltd.</h3>
+            <p>Professional OEM/ODM Manufacturing | Global Export | Quality Standards</p>
+            <p>Email: 112848966@qq.com | Location: Shanghai, China</p>
+            <p style="margin-top: 20px; opacity: 0.6;">© 2026 Shanghai Elite Trading Co., Ltd. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script>
-        document.querySelectorAll('.category-nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    document.querySelectorAll('.category-nav a').forEach(a => a.classList.remove('active'));
-                    this.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
